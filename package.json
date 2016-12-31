@@ -1,9 +1,11 @@
 {
   "name": "app",
   "version": "0.1.0",
-   "private": true,
+  "private": true,
   "scripts": {
-    "start": "node app/bin/www.js"
+    "start": "node app/bin/www.js",
+    "dev": "tsc && node app/bin/www.js",
+    "build:live": "./node_modules/.bin/nodemon -e ts --exec \"npm run compile\""
   },
   "dependencies": {
     "body-parser": "^1.14.2",
@@ -22,6 +24,8 @@
     "@types/express": "^4.0.33",
     "@types/morgan": "^1.7.32",
     "@types/node": "^6.0.45",
-    "@types/serve-favicon": "^2.2.27"
-  }  
+    "@types/serve-favicon": "^2.2.27",
+    "nodemon": "^1.11.0",
+    "ts-node": "^2.0.0"
+  }
 }
